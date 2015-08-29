@@ -3,7 +3,7 @@
 function prompt ()
 {
 return=$1
-read "$2" val
+read -s "$2" val
 echo
 
 eval $return="'$val'"

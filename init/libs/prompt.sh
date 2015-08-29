@@ -3,8 +3,9 @@
 function prompt ()
 {
 return=$1
-printf $2
+printf "%s" "$2"
 read val
+echo
 
 eval $return="'$val'"
 }

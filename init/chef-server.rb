@@ -1,4 +1,4 @@
-server_name = "chef.uccs.liddev.com"
+server_name = 'chef.uccs.liddev.com'
 api_fqdn server_name
 bookshelf['vip'] = server_name
 nginx['url'] = "https://#{server_name}"

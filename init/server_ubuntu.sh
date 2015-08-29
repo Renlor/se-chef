@@ -25,8 +25,6 @@ prompt email     'Email     : '
 prompt org_shortname 'Organization Short Name: '
 prompt org_longname  'Full Organization Name : '
 
-get_password password 12
-
 # Update Ubuntu
 sudo apt-get update
 sudo apt-get -y -o Dpkg::Options::=--force-confnew upgrade

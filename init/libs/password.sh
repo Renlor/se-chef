@@ -8,11 +8,11 @@ local ps
 local ps_verify
 
 while true; do
-  read -s -p 'Password (hidden):' ps
-
-  read -s -p 'Retype Password:  ' ps_verify
-
-  if [ "$ps" -ne "$ps_verify" ]; then
+  read -s -p 'Password (hidden): ' ps
+  echo
+  read -s -p 'Retype Password  : ' ps_verify
+  echo
+  if [ "$ps" != "$ps_verify" ]; then
     echo "Passwords do not match. Try again."
   elif [ "${#ps}" -lt "$length" ]; then
     echo 'Password must be at least $length characters.'

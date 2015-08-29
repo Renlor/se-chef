@@ -51,7 +51,7 @@ sudo apt-get -y install postgresql git
 #cat 'product-data' | cut -d ''
 
 # Download Chef-Server
-wget "$chef_package_url"
+wget -O "$chef_package_name" "$chef_package_url"
 #TODO run checksum
 
 # Install Chef-Server

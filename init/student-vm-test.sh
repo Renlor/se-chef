@@ -32,7 +32,7 @@ sudo apt-get -y -o Dpkg::Options::="--force-confnew" dist-upgrade
 export DEBIAN_FRONTEND=noninteractive
 sudo apt-get -y install chef git build-essential wget
 
-rm -rf /var/chef-solo
+sudo rm -rf /var/chef-solo
 
 sudo mkdir '/var/chef-solo'
 sudo git clone -b 'production' 'https://github.com/uccs-se/chef' '/var/chef-solo'

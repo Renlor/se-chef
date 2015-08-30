@@ -13,7 +13,7 @@ cookbook_file '/etc/chef/solo.rb' do
 end
 
 cookbook_file '/etc/chef/node.json' do
-  source 'node.json'
+  source "#{node.chef_environment}.json"
   owner 'root'
   group 'root'
   mode '640'

@@ -29,10 +29,11 @@ sudo apt-get update
 sudo apt-get -y -o Dpkg::Options::="--force-confnew" upgrade
 sudo apt-get -y -o Dpkg::Options::="--force-confnew" dist-upgrade
 
-sudo DEBIAN_FRONTEND=noninteractive apt-get -y install chef git build-essential wget
+export DEBIAN_FRONTEND=noninteractive
+sudo apt-get -y install chef git build-essential wget
 
 sudo mkdir '/var/chef-solo'
 sudo git clone -b 'production' 'https://github.com/uccs-se/chef' '/var/chef-solo'
 # Set up chef system control.
-sudo chef-apply chef/cookbooks/se-chef-solo/recipes/default.rb
+sudo chef-solo -c /var/chef-solo/cookbooks/se-chef-solo/files/solo.rb -j /var/chef-solo/cookbooks/se-chef-solo/files/production.json
 # the rest is up to chef.

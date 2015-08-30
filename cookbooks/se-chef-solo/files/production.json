@@ -1,0 +1,11 @@
+{
+  "name": "student",
+  "chef_environment": "production",
+  "normal": {
+    "tags": [
+    ]
+  },
+  "run_list": [
+    "role[student-vm]"
+  ]
+}

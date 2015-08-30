@@ -1,4 +1,3 @@
-
 include_recipe 'se-chef-solo'
 include_recipe 'se-ntp'
 include_recipe 'se-update'

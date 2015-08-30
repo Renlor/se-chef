@@ -6,6 +6,6 @@ cron 'update' do
   month default['update']['month']
   user default['chef']['user']
   command %W{
-          git pull -b #{default['git']['branch']} #{default['git']['repo']} #{default['chef']['home']} && chef-solo
+          git 
   }.join(' ')
 end

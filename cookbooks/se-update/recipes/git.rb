@@ -32,3 +32,5 @@ git 'chef' do
 end
 
 
+
+include_recipe 'cron'

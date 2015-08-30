@@ -9,7 +9,7 @@
   "override_attributes": {
   },
   "run_list": [
-    "recipe[role-student-vm:default]"
+    "recipe[role-student-vm]"
   ],
   "env_run_lists": {
   }

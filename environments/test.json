@@ -6,6 +6,9 @@
   "json_class": "Cheff:Environment",
   "chef_type": "environment",
   "default_attributes": {
+    "git": {
+      "branch": "test"
+    }
   },
   "override_attributes": {
   }

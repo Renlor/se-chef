@@ -1,5 +1,5 @@
-name        'se-ntp'
-description 'Configure NTP.'
+name        'role-student-vm'
+description 'Configure and update a student vm.'
 version     '0.1.0'
 
 depends 'se-chef-solo'

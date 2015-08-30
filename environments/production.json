@@ -1,11 +1,14 @@
 {
-  "name": "deploy",
-  "description": "The deployment branch.",
+  "name": "production",
+  "description": "The production branch.",
   "cookbook_versions": {
   },
   "json_class": "Cheff:Environment",
   "chef_type": "environment",
   "default_attributes": {
+    "git": {
+      "branch": "production"
+    }
   },
   "override_attributes": {
   }

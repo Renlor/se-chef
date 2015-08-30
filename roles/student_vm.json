@@ -1,0 +1,20 @@
+{
+  "name": "student_vm",
+  "description": "This role configures a student vm.",
+  "chef_type": "role",
+  "json_class": "Chef::Role",
+  "default_attributes": {
+
+  },
+  "override_attributes": {
+  },
+  "run_list": [
+    "role[base]",
+    "recipe[se-xfce]",
+    "recipe[se-rdp]",
+    "recipe[se-rvm]",
+    "recipe[se-rubymine]"
+  ],
+  "env_run_lists": {
+  }
+}

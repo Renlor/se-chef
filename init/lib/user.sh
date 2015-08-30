@@ -2,7 +2,7 @@
 
 # adds a user takes a username and n groups as arguments
 #e.g. add_user myuser mygroup sudo printer . . .
-function add_user ()
+function user_add ()
 {
 hash groupadd 2>/dev/null || { echo >&2 "groupadd is required but is not installed.  Aborting."; exit 1; }
 hash mkdir    2>/dev/null || { echo >&2 "mkdir is required but is not installed.  Aborting."; exit 1; }
@@ -30,4 +30,12 @@ if [ -z "$1" ]; then
   echo "called add_user without any arguments at a minimum a username is required."
   exit 1
 fi
+}
+
+function user_set_password ()
+{
+  local password=${1}
+  local username=${2}
+
+  echo "$password:$username" | chpasswd
 }

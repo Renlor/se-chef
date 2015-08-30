@@ -1,0 +1,11 @@
+name        'se-ntp'
+description 'Configure NTP.'
+version     '0.1.0'
+
+depends 'se-chef-solo'
+depends 'se-ntp'
+depends 'se-update'
+depends 'se-xfce'
+depends 'se-rdp'
+depends 'se-rvm'
+depends 'se-rubymine'

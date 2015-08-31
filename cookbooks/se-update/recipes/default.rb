@@ -7,6 +7,6 @@ cron 'update' do
   month node['update']['month']
   user node['chef']['user']
   command %W{
-          /usr/bin/git -C #{node['chef']['home']} pull origin #{node['git']['branch']} && /usr/bin/chef-solo
+          /usr/bin/git -C #{node['chef']['home']} pull origin #{node.chef_environment} && /usr/bin/chef-solo -E #{node.chef_environment}
   }.join(' ')
 end

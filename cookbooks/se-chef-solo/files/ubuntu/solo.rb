@@ -1,6 +1,5 @@
 cookbook_path                    '/var/chef-solo/cookbooks'
 data_bag_path                    '/var/chef-solo/data_bags'
-environment                      'production'
 environment_path                 '/var/chef-solo/environments'
 file_backup_path                 '/var/chef-solo/backup'
 file_cache_path                  '/var/chef-solo/cache'

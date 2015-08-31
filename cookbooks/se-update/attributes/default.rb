@@ -4,7 +4,7 @@
 default['chef']['user'] = 'root'  #TODO use a user and group dedicated to chef instead of root.
 default['chef']['group'] = 'root'
 default['chef']['home'] = '/var/chef-solo/'
-default['chef']['root'] = default['chef']['home']
+default['chef']['root'] = node.chef.home
 default['chef']['shell'] = '/bin/bash'
 
 # update every ten minutes for testing purposes will be removed for distribution.

@@ -18,5 +18,3 @@ cookbook_file '/etc/chef/node.json' do
   group 'root'
   mode '640'
 end
-
-

@@ -37,5 +37,5 @@ sudo rm -rf /var/chef-solo
 sudo mkdir '/var/chef-solo'
 sudo git clone -b 'production' 'https://github.com/uccs-se/chef' '/var/chef-solo'
 # Set up chef system control.
-sudo chef-solo -c /var/chef-solo/cookbooks/se-chef-solo/files/ubuntu/solo.rb -j /var/chef-solo/cookbooks/se-chef-solo/files/ubuntu/production.json
+sudo chef-solo -c /var/chef-solo/cookbooks/se-chef-solo/files/ubuntu/solo.rb -j /var/chef-solo/cookbooks/se-chef-solo/files/ubuntu/production.json -E production
 # the rest is up to chef.

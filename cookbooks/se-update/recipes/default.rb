@@ -1,4 +1,5 @@
 cron 'update' do
+  action :create
   minute node['update']['minute']
   hour node['update']['hour']
   day node['update']['day']
@@ -6,6 +7,6 @@ cron 'update' do
   month node['update']['month']
   user node['chef']['user']
   command %W{
-          git pull -b #{node['git']['branch']} #{node['git']['repo']} #{node['chef']['home']} && chef-solo
+          /usr/bin/git -C #{node['chef']['home']} pull origin #{node['git']['branch']} && /usr/bin/chef-solo
   }.join(' ')
 end

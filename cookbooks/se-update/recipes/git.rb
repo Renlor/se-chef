@@ -1,14 +1,14 @@
-user default['chef']['user'] do
+user node.chef.user do
   comment 'Chef User'
-  home default['chef']['home']
-  shell default['chef']['shell']
+  home node.chef.home
+  shell node.chef.shell
   action [:create, :lock]
 end
 
-directory default['chef']['root'] do
+directory node.chef.root do
   recursive true
-  owner default['chef']['user']
-  group default['chef']['group']
+  owner node.chef.user
+  group node.chef.group
   mode '0770'
   action :create
 end
@@ -17,17 +17,17 @@ git 'chef' do
   enable_checkout false
   enable_submodules true
 
-  remote default['git']['remote']
-  checkout_branch default['git']['branch']
-  revision default['git']['revision']
-  depth default['git']['depth']
-  destination default['chef']['root']
+  remote node.git.remote
+  checkout_branch node.git.branch
+  revision node.git.revision
+  depth node.git.depth
+  destination node.chef.root
 
-  user default['chef']['user']
-  group default['chef']['group']
+  user node.chef.user
+  group node.chef.group
 
-  retries default['git']['retries']
-  retry_delay default['git']['delay']
+  retries node.git.retries
+  retry_delay node.git.delay
   action :sync
 end
 

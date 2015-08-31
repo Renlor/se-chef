@@ -26,8 +26,8 @@ fi
 
 # Update Ubuntu
 sudo apt-get update
-sudo apt-get -y -o Dpkg::Options::="--force-confnew" upgrade
-sudo apt-get -y -o Dpkg::Options::="--force-confnew" dist-upgrade
+sudo apt-get -y -o DPkg::Options::="--force-confnew" upgrade
+sudo apt-get -y -o DPkg::Options::="--force-confnew" dist-upgrade
 
 export DEBIAN_FRONTEND=noninteractive
 sudo apt-get -y install chef git build-essential wget

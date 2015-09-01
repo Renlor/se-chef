@@ -6,6 +6,6 @@
     ]
   },
   "run_list": [
-    "recipe[student-vm]"
+    "recipe[student_vm]"
   ]
 }

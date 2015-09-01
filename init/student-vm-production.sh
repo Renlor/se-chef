@@ -30,12 +30,15 @@ sudo apt-get -y -o DPkg::Options::="--force-confnew" upgrade
 sudo apt-get -y -o DPkg::Options::="--force-confnew" dist-upgrade
 
 export DEBIAN_FRONTEND=noninteractive
-sudo apt-get -y install chef git build-essential wget
+sudo apt-get -y install chef git build-essential wget chef-dk
 
 sudo rm -rf /var/chef-solo
 
 sudo mkdir '/var/chef-solo'
 sudo git clone -b 'production' 'https://github.com/uccs-se/chef' '/var/chef-solo'
+sudo cd /var/chef-solo
+sudo bundle install
+sudo berks install
 # Set up chef system control.
-sudo chef-solo -c /var/chef-solo/cookbooks/se-chef-solo/files/ubuntu/solo.rb -j /var/chef-solo/cookbooks/se-chef-solo/files/ubuntu/production.json -E production
+sudo chef-solo -c /var/chef-solo/cookbooks/student_vm/files/ubuntu/solo.rb -j /var/chef-solo/cookbooks/student_vm/files/ubuntu/production.json -E production
 # the rest is up to chef.

@@ -1,5 +1,5 @@
 {
-  "name": "production",
+  "name": "prod",
   "description": "The production branch.",
   "cookbook_versions": {
   },
@@ -7,7 +7,7 @@
   "chef_type": "environment",
   "default_attributes": {
     "git": {
-      "branch": "production"
+      "branch": "prod"
     }
   },
   "override_attributes": {

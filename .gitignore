@@ -7,3 +7,24 @@
 .chef/encrypted_data_bag_secret
 .chef
 .idea
+
+*~
+*#
+.#*
+\#*#
+.*.sw[a-z]
+*.un~
+pkg/
+
+# Berkshelf
+.vagrant
+#/cookbooks
+#Berksfile.lock
+
+# Bundler
+#Gemfile.lock
+bin/*
+.bundle/*
+
+.kitchen/
+.kitchen.local.yml

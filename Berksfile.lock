@@ -1,0 +1,9 @@
+DEPENDENCIES
+  student_vm
+    git: git://github.com/uccs-se/student_vm.git
+    revision: d9936a31dca16d7504818942c21e26b9c8506b64
+
+GRAPH
+  ntp (1.8.6)
+  student_vm (0.2.0)
+    ntp (~> 1.8.6)

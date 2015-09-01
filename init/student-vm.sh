@@ -68,11 +68,11 @@ sudo apt-get -y -o DPkg::Options::="--force-confnew" dist-upgrade
 export DEBIAN_FRONTEND=noninteractive
 sudo apt-get -y install chef git build-essential wget
 
-sudo rm -rf /var/chef-solo
-
-wget https://opscode-omnibus-packages.s3.amazonaws.com/ubuntu/13.10/x86_64/chefdk_0.7.0-1_amd64.deb -o chefdk_0.7.0-1_amd64.deb
+wget https://opscode-omnibus-packages.s3.amazonaws.com/ubuntu/12.04/x86_64/chefdk_0.7.0-1_amd64.deb -O chefdk_0.7.0-1_amd64.deb
 sudo dpkg -i chefdk_0.7.0-1_amd64.deb
 rm chefdk_0.7.0-1_amd64.deb
+
+sudo rm -rf /var/chef-solo
 
 #TODO: install current system ruby
 

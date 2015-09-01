@@ -18,8 +18,8 @@ pkg/
 
 # Berkshelf
 .vagrant
-#/cookbooks
-#Berksfile.lock
+/cookbooks
+Berksfile.lock
 
 # Bundler
 #Gemfile.lock

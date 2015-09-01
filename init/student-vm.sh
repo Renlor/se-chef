@@ -82,5 +82,5 @@ cd /var/chef-solo
 berks install
 chef verify
 # Set up chef system control.
-sudo chef-solo -c /var/chef-solo/cookbooks/student_vm/files/ubuntu/solo.rb -j /var/chef-solo/cookbooks/student_vm/files/ubuntu/production.json -E ${environment}
+sudo chef-solo -c '/var/chef-solo/cookbooks/student_vm/files/ubuntu/solo.rb' -j "/var/chef-solo/cookbooks/student_vm/files/ubuntu/${environment}.json" -E ${environment}
 # the rest is up to chef.

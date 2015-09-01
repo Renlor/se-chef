@@ -78,8 +78,9 @@ sudo rm -rf /var/chef-solo
 
 sudo mkdir '/var/chef-solo'
 sudo git clone -b ${environment} 'https://github.com/uccs-se/chef' '/var/chef-solo'
-sudo cd /var/chef-solo
+cd /var/chef-solo
 berks install
+chef verify
 # Set up chef system control.
 sudo chef-solo -c /var/chef-solo/cookbooks/student_vm/files/ubuntu/solo.rb -j /var/chef-solo/cookbooks/student_vm/files/ubuntu/production.json -E ${environment}
 # the rest is up to chef.

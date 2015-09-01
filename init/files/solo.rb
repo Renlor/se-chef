@@ -1,4 +1,4 @@
-cookbook_path                    '/var/chef-solo/cookbooks'
+cookbook_path                    ['/var/chef-solo/cookbooks', '~/.berkshelf/cookbooks']
 data_bag_path                    '/var/chef-solo/data_bags'
 environment_path                 '/var/chef-solo/environments'
 file_backup_path                 '/var/chef-solo/backup'

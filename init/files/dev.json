@@ -1,0 +1,11 @@
+{
+  "name": "student",
+  "chef_environment": "dev",
+  "normal": {
+    "tags": [
+    ]
+  },
+  "run_list": [
+    "recipe[student-vm]"
+  ]
+}

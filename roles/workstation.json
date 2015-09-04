@@ -1,6 +1,6 @@
 {
-  "name": "student_vm",
-  "description": "This role configures a student vm.",
+  "name": "workstation",
+  "description": "This role configures a workstation vm for the SE course.",
   "chef_type": "role",
   "json_class": "Chef::Role",
   "default_attributes": {
@@ -9,7 +9,7 @@
   "override_attributes": {
   },
   "run_list": [
-    "recipe[student-vm]"
+    "recipe[workstation]"
   ],
   "env_run_lists": {
   }

@@ -246,6 +246,3 @@ PLATFORMS
 DEPENDENCIES
   berkshelf
   knife-solo
-
-BUNDLED WITH
-   1.10.0

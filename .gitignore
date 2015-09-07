@@ -20,6 +20,7 @@ pkg/
 .vagrant
 /cookbooks
 Berksfile.lock
+/nodes
 
 # Bundler
 #Gemfile.lock

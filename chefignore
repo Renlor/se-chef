@@ -46,12 +46,12 @@ a.out
 # Testing #
 ###########
 .watchr
-.rspec
-spec/*
-spec/fixtures/*
-test/*
-features/*
-Guardfile
+# .rspec
+# spec/*
+# spec/fixtures/*
+# test/*
+# features/*
+# Guardfile
 Procfile
 .kitchen
 
@@ -59,7 +59,7 @@ Procfile
 #######
 .git
 */.git
-.gitignore
+# .gitignore
 .gitmodules
 .gitconfig
 .gitattributes

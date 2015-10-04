@@ -9,7 +9,8 @@
   "override_attributes": {
   },
   "run_list": [
-    "recipe[workstation]"
+    "recipe[workstation]",
+    "recipe[homework]"
   ],
   "env_run_lists": {
   }
